@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(27, 136, 43);
+
+        }
+
+        .form {
+            max-width: 100%;
+            height: 100vh;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        form {
+            width: 50%;
+            height: 50%;
+            background-color: rgb(249, 244, 244);
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 5px black;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+            box-sizing: border-box;
+            align-items: center;
+        }
+
+        #message {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        form >button {
+            width: 20%;
+            padding: 13px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+
+        h2 {
+            font-weight: bolder;
+            font-size: 36px;
+        }
+
+        .field {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        
+        .field label {
+            font-size: 24px;
+        }
+        .field > button{
+            position: absolute;
+            margin-right: 5px;
+            right: 0;
+            /* padding: 10px; */
+            background-color: white;
+            color: grey;
+            border: none;
+            cursor: pointer;
+        }
+
+        input {
+            width: 60%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        input:focus {
+            border-color: #3b82f6;
+        }
+        #strength{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <form id="loginForm">
+            <h2>Welcome Back</h2>
+            <div class="field">
+                <label for="email">Email: </label>
+                <input type="email" id="email" placeholder="Enter your Email">
+            </div>
+
+            <div class="field">
+                <label for="password">Password: </label>
+                <input type="password" id="password" placeholder="Enter Password">
+                <button type="button" id="toggle"><img id="svg" src="show.svg" alt=""></button>
+            </div>
+            <p id="strength"></p>
+
+            <button type="submit">Login</button>
+            <p id="message"></p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

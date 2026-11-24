@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #3b82f6;
+
+        }
+        button {
+            width: 20%;
+            padding: 13px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            border:1px solid white;
+            box-shadow: 0px 0px 20px 10px #3b82f6;
+        }
+
+        button:hover {
+            background: white;
+            color:#2563eb ;
+            box-shadow: 0px 0px 30px 20px #3b82f6;
+            transition: 0.5s;
+        }
+
+        header{
+            background-color: #3b82f6;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        nav{
+            background-color: #2563eb;
+            margin: 5px;
+            width: 80%;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 2px black;
+            position: fixed;
+            height: 50px;
+            top: 2px;
+        }
+        nav ul{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            align-items: center;
+        }
+        ul li{
+            list-style: none;
+        }
+        li a{
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        li:hover a{
+            border-bottom:3px solid white ;
+        }
+
+        main{
+            padding-top: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="">Inventory</a></li>
+                <li><a href="">Contacts</a></li>
+                <li><a href="">Notifications</a></li>
+                <button type="button" id="logout">Logout</button>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <h1>Welcome to Dashboard</h1>
+    </main>
+
+
+    <script>
+        document.getElementById('logout').addEventListener('click',()=>{
+            if(sessionStorage.getItem('loggedIn')==="true"){
+                sessionStorage.removeItem('loggedIn')
+                navigation.navigate('/form.html')
+            }
+        })
+    </script>
+</body>
+</html>
