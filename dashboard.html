@@ -100,7 +100,8 @@
         document.getElementById('logout').addEventListener('click',()=>{
             if(sessionStorage.getItem('loggedIn')==="true"){
                 sessionStorage.removeItem('loggedIn')
-                navigation.navigate('/index.html')
+                // navigation.navigate('/index.html')
+                window.location.href = "index.html";
             }
         })
     </script>

@@ -80,7 +80,8 @@ loginForm.addEventListener("submit", function (e) {
         if (checkPassword(password)) {
             setTimeout(() => {
                 message.textContent = "";
-                navigation.navigate('/dashboard.html')
+                // navigation.navigate('/dashboard.html')
+                window.location.href = "dashboard.html";
 
             }, 1000)
             message.style.color = "green";
