@@ -7,6 +7,11 @@ const strength={0:'Too Weak',1:'Weak',2:'Medium',3:'Good',4:'Strong','success':'
 const colors={0:'red',1:'red',2:'orange',3:'orange',4:'green','success':'green'}
 const messages={0:'Password must contain 8 characters!',1:'Password must contain 1 Capital letter!',2:'Password must contain 1 Small letter!',3:'Password must contain 1 number!',4:'Password must contain 1 special character!'}
 
+function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
 function checkEmail(email) {
     const original_email = 'abdulahad443322@gmail.com'
     if (email === original_email)
@@ -66,6 +71,11 @@ loginForm.addEventListener("submit", function (e) {
         }, 3000)
         message.style.color = "red";
         message.textContent = "Please fill in all fields.";
+        return;
+    }
+    if (!validateEmail(email)) {
+        message.style.color = "red";
+        message.textContent = "Please enter a valid email address!";
         return;
     }
     if (checkEmail(email)) {
