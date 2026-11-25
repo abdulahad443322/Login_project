@@ -25,6 +25,11 @@ A simple login system developed using HTML, CSS, and JavaScript.
 3. Open `index.html` in your browser.
 4. Enter your login credentials.
 
+## Correct credentials
+
+Email: abdulahad443322@gmail.com
+Password: Abdul@123
+
 ## Live Demo
 
 [View Project](https://abdulahad443322.github.io/Login_project/index.html)
